@@ -24,7 +24,7 @@ def login(username, password, logger, auth: NjuUiaAuth):
 
     logger.info('登录成功！')
     sleeptime = random.randint(1,360)
-    logger.info("将会等待" + sleeptime + "秒...")
+    logger.info("将会等待" + str(sleeptime) + "秒...")
     time.sleep(sleeptime)
     return True
 
