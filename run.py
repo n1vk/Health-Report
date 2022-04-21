@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 import os
 import json
 import time
+import random
 import logging
 from report import apply
 
@@ -22,6 +23,9 @@ def login(username, password, logger, auth: NjuUiaAuth):
         return False
 
     logger.info('登录成功！')
+    sleeptime = random.randint(1,360)
+    logger.info("将会等待" + sleeptime + "秒...")
+    time.sleep(sleeptime)
     return True
 
 
